@@ -1,0 +1,21 @@
+site_name: ActiveBiotech - Sensor documentation
+site_url: https://www.activebiotech.com.hk
+
+nav:
+    - Overview: 'index.md'
+    - Quick Start: 'quick-start.md'
+    - Development Tool:
+       - Android App: 'android-app.md'
+    - Communication Interface:
+       - UART: 'uart.md'
+       - Bluetooth: 'bluetooth.md'
+    - Sensor Command:
+       - 'General': 'general.md'
+       - 'Inertial measurement unit (IMU)': 'imu.md'
+       - 'Magnetometer': 'magnetometer.md'
+       - 'Ambient light sensor (ALS)': 'als.md'
+       - 'Electromyography (EMG)': 'emg.md'
+       - 'Electrocardiography (ECG)': 'ecg.md'
+       - 'Vibrater': 'vibrater.md'
+
+theme: readthedocs

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/resis/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Resistive Sensor - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Resistive Sensor";
+        var mkdocs_page_input_path = "resis.md";
+        var mkdocs_page_url = "/resis/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Resistive Sensor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#keyword">Keyword</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x80">Tag 0x80</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output">Data Format - Output:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input">Data Format - Input:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x81">Tag 0x81</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning_1">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output_1">Data Format - Output:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input_1">Data Format - Input:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x82">Tag 0x82</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning_2">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input_2">Data Format - Input:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output_2">Data Format - Output:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x86">Tag 0x86</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning_3">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input_3">Data Format - Input:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output_3">Data Format - Output:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Sensor Command B-Series</li>
+      <li class="breadcrumb-item active">Resistive Sensor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="resistive-sensor-command">Resistive Sensor Command</h1>
+<p>Tag <code>0x80</code>-<code>0x8f</code> command for resistive sensor are explained in this page.</p>
+<hr />
+<h3 id="keyword">Keyword</h3>
+<blockquote>
+<p><strong>NA</strong>: Not applicable, this command should no be sent by the sensor/application.</p>
+<p><strong>None</strong>: No data contained in this command, data length can be set to 0x00.</p>
+<p><strong>Output</strong>: Data from user application to sensor.</p>
+<p><strong>Input</strong>: Data from sensor to user application.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x80">Tag <code>0x80</code></h3>
+<blockquote>
+<h4 id="meaning">Meaning:</h4>
+<p>Set resistive sensor measurement configuration.</p>
+<h4 id="data-format-output">Data Format - Output:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">CH0 Gain</td>
+<td style="text-align: left;">CH1 Gain</td>
+<td style="text-align: left;">CH2 Gain</td>
+<td style="text-align: left;">CH3 Gain</td>
+<td style="text-align: left;">CH4 Gain</td>
+<td style="text-align: left;">CH5 Gain</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CH Gain:</strong> Code given below. Set the channel is activate or not, and how many times the measured value is amplified.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Gain</th>
+<th style="text-align: left;">code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">OFF</td>
+<td style="text-align: left;">0xff</td>
+</tr>
+<tr>
+<td style="text-align: left;">x1</td>
+<td style="text-align: left;">0x00</td>
+</tr>
+<tr>
+<td style="text-align: left;">x2</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">x4</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+<tr>
+<td style="text-align: left;">x8</td>
+<td style="text-align: left;">0x03</td>
+</tr>
+<tr>
+<td style="text-align: left;">x16</td>
+<td style="text-align: left;">0x04</td>
+</tr>
+<tr>
+<td style="text-align: left;">x32</td>
+<td style="text-align: left;">0x05</td>
+</tr>
+<tr>
+<td style="text-align: left;">x64</td>
+<td style="text-align: left;">0x06</td>
+</tr>
+<tr>
+<td style="text-align: left;">x128</td>
+<td style="text-align: left;">0x07</td>
+</tr>
+</tbody>
+</table>
+<p>This configuration command have to be called every time before <code>0x81</code> start command.</p>
+<h4 id="data-format-input">Data Format - Input:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x81">Tag <code>0x81</code></h3>
+<blockquote>
+<h4 id="meaning_1">Meaning:</h4>
+<p>Start resistive sensor measurement. Measurement will continue until <code>0x82</code> stop command is called. Data reply with tag <code>0x86</code>.</p>
+<h4 id="data-format-output_1">Data Format - Output:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">IDAC Current</td>
+<td style="text-align: left;">Data Rate</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">IDAC Current</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Data Rate</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">10uA</td>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;">2.5Hz</td>
+<td style="text-align: left;">0x00</td>
+</tr>
+<tr>
+<td style="text-align: left;">50uA</td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;">5Hz</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">100uA</td>
+<td style="text-align: left;">0x03</td>
+<td style="text-align: left;">10Hz</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+<tr>
+<td style="text-align: left;">250uA</td>
+<td style="text-align: left;">0x04</td>
+<td style="text-align: left;">16.6Hz</td>
+<td style="text-align: left;">0x03</td>
+</tr>
+<tr>
+<td style="text-align: left;">500uA</td>
+<td style="text-align: left;">0x05</td>
+<td style="text-align: left;">20Hz</td>
+<td style="text-align: left;">0x04</td>
+</tr>
+<tr>
+<td style="text-align: left;">750uA</td>
+<td style="text-align: left;">0x06</td>
+<td style="text-align: left;">50Hz</td>
+<td style="text-align: left;">0x05</td>
+</tr>
+<tr>
+<td style="text-align: left;">1000uA</td>
+<td style="text-align: left;">0x07</td>
+<td style="text-align: left;">60Hz</td>
+<td style="text-align: left;">0x06</td>
+</tr>
+<tr>
+<td style="text-align: left;">1500uA</td>
+<td style="text-align: left;">0x08</td>
+<td style="text-align: left;">100Hz</td>
+<td style="text-align: left;">0x07</td>
+</tr>
+<tr>
+<td style="text-align: left;">2000uA</td>
+<td style="text-align: left;">0x09</td>
+<td style="text-align: left;">200Hz</td>
+<td style="text-align: left;">0x08</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">400Hz</td>
+<td style="text-align: left;">0x09</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">800Hz</td>
+<td style="text-align: left;">0x0a</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1000Hz</td>
+<td style="text-align: left;">0x0b</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><del>2000Hz</del></td>
+<td style="text-align: left;">0x0c</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><del>4000Hz</del></td>
+<td style="text-align: left;">0x0d</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IDAC Current</strong> is the current pass through the resistive sensor, the maximum supply voltage is 3.3V, all resistive sensor are in series. Since the internal reference voltage regulation, maximum voltage on each sensor should not exceed 2.5V.</p>
+<p><strong>Data Rate</strong> is shared between all channel, for example, if 100Hz DR is set and 4 channel is activated, DR on each channel is 25Hz.</p>
+<h4 id="data-format-input_1">Data Format - Input:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x82">Tag <code>0x82</code></h3>
+<blockquote>
+<h4 id="meaning_2">Meaning:</h4>
+<p>Stop resistive sensor measurement.</p>
+<h4 id="data-format-input_2">Data Format - Input:</h4>
+<p>None.</p>
+<h4 id="data-format-output_2">Data Format - Output:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x86">Tag <code>0x86</code></h3>
+<blockquote>
+<h4 id="meaning_3">Meaning:</h4>
+<p>Reply</p>
+<h4 id="data-format-input_3">Data Format - Input:</h4>
+<p>NA.</p>
+<h4 id="data-format-output_3">Data Format - Output:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">2 - 12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">ADC Value (CH0-CH5)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADC Value:</strong> Two bytes two's complement value. Returned number of values depend on how many channel is activated, smaller channel data go first.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tof/" class="btn btn-neutral float-left" title="Time of Flight (TOF)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tof/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

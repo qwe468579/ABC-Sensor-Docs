@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/module-battery-charger/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Battery Charger Module - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Battery Charger Module";
+        var mkdocs_page_input_path = "module-battery-charger.md";
+        var mkdocs_page_url = "/module-battery-charger/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Battery Charger Module</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#details">Details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#battery-charging">Battery Charging</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#voltage-supervision">Voltage Supervision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dcdc-voltage-conversion">DC/DC Voltage Conversion</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#layout">Layout</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#technical-specification">Technical Specification</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#battery-charging_1">Battery Charging</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#voltage-supervision_1">Voltage Supervision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dcdc-voltage-conversion_1">DC/DC Voltage Conversion</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Developer Module</li>
+      <li class="breadcrumb-item active">Battery Charger Module</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="battery-charger-module">Battery Charger Module</h1>
+<p><img alt="A101-A102-3d-p1" src="../images/A101-A102-3d-p1.png" /></p>
+<h3 id="details">Details</h3>
+<blockquote>
+<p>A101 and A102 are tiny battery charger module, with the following function:</p>
+<ul>
+<li>Battery Charging</li>
+<li>Voltage Supervision</li>
+<li>DC/DC Voltage Conversion</li>
+</ul>
+</blockquote>
+<h4 id="battery-charging">Battery Charging</h4>
+<blockquote>
+<p>A101 and A102 support 1s Lithium polymer battery, this board provide charging and discharge function to the battery. Charging current is adjustable by changing the resistor value on the board, form 50mA to 800mA, default is set to 100mA. Charging input voltage is 5V and can be connected through the Type-C port or the soldering pin on board.</p>
+</blockquote>
+<h4 id="voltage-supervision">Voltage Supervision</h4>
+<blockquote>
+<p>Voltage supervision is a voltage monitor function that can stop the output when the battery voltage falls below a certain threshold, and recover the output when battery voltage raise again. For the LDO version, the default cut-off voltage is 3.08V, recovery voltage is 3.4V. For the Buck-Boost version, the default cut-off voltage is 2.75V, recovery voltage is 3.3V. Both voltage threshold can be adjusted by changing the resistor value on board.</p>
+</blockquote>
+<h4 id="dcdc-voltage-conversion">DC/DC Voltage Conversion</h4>
+<blockquote>
+<p>The board provide voltage conversion function, the output voltage can be adjusted to fit different requirements. The default output voltage is 3.3V for both version. Max output current is 1A.</p>
+</blockquote>
+<h3 id="layout">Layout</h3>
+<p><img alt="A101-board-layout" src="../images/A101-board-layout.png" /></p>
+<p><img alt="A102-board-layout" src="../images/A102-board-layout.png" /></p>
+<h3 id="technical-specification">Technical Specification</h3>
+<blockquote>
+<h4 id="battery-charging_1">Battery Charging</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">A101 / A102</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Charging Port</td>
+<td style="text-align: left;">Type-C / Soldering Pin</td>
+</tr>
+<tr>
+<td style="text-align: left;">Battery Port</td>
+<td style="text-align: left;">SH1.0 / Soldering Pin</td>
+</tr>
+<tr>
+<td style="text-align: left;">Charging Input Voltage</td>
+<td style="text-align: left;">5V</td>
+</tr>
+<tr>
+<td style="text-align: left;">Charging Current</td>
+<td style="text-align: left;">50mA to 800mA (default 100mA)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="voltage-supervision_1">Voltage Supervision</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">A101</th>
+<th style="text-align: left;">A102</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Cut-off Voltage</td>
+<td style="text-align: left;">3.08V</td>
+<td style="text-align: left;">2.75V</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recover Voltage</td>
+<td style="text-align: left;">3.4V</td>
+<td style="text-align: left;">3.3V</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dcdc-voltage-conversion_1">DC/DC Voltage Conversion</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">A101</th>
+<th style="text-align: left;">A102</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Voltage Conversion Method</td>
+<td style="text-align: left;">LDO</td>
+<td style="text-align: left;">Buck-Boost</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output Port</td>
+<td style="text-align: left;">Soldering Pin</td>
+<td style="text-align: left;">Soldering Pin</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output Voltage</td>
+<td style="text-align: left;">0.55V - 3.3V</td>
+<td style="text-align: left;">2.3 - 5.3V</td>
+</tr>
+<tr>
+<td style="text-align: left;">Default Output Voltage</td>
+<td style="text-align: left;">3.3V</td>
+<td style="text-align: left;">3.3V</td>
+</tr>
+<tr>
+<td style="text-align: left;">Max Output Current</td>
+<td style="text-align: left;">1A</td>
+<td style="text-align: left;">1A</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../logger-socket/" class="btn btn-neutral float-left" title="LOGGER Socket"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../bluetooth/" class="btn btn-neutral float-right" title="Bluetooth">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../logger-socket/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../bluetooth/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

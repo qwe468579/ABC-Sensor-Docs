@@ -1,0 +1,46 @@
+site_name: ActiveBiotech - Sensor documentation
+site_url: https://www.activebiotech.com.hk
+
+nav:
+   - Introduce:
+      - Overview: 'index.md'
+   - BLE Sensor:
+      - B10 - 10 Dof IMU: 'ble-sensor-b10.md'
+      - R10 - Resistive Sensor Reader: 'ble-sensor-r10.md'
+   - Logger:
+      - 'T10 - Temp, Humidity, Air Press': 'logger-t10.md'
+      - A10 - Motion: 'logger-a10.md'
+      - R10 - Resistive Sensor: 'logger-r10.md'
+      - LOGGER Socket: 'logger-socket.md'
+   - Collector:
+      - 'T10 - Temp, Humidity, Air Press': 'collector-t10.md'
+      - A10 - Acceleration: 'collector-a10.md'
+      - R10 - Resistive: 'collector-r10.md'
+      - P10 - PIR: 'collector-p10.md'
+   - Developer Module:
+      - Battery Charger Module: 'module-battery-charger.md'
+      - DC-DC Module: 'module-dc-dc.md'
+      - USB-UART Module: 'module-usb-uart.md'
+      - MCU Module: 'module_mcu.md'
+   - Development Tool:
+      - LOGGER Data Reader: 'logger-data-reader.md'
+   - Communication Interface:
+      - Bluetooth: 'bluetooth.md'
+   - Sensor Command B-Series:
+      - 'General': 'general.md'
+      - 'LED' : 'led.md'
+      - 'Storage' : 'storage.md'
+      - 'Inertial measurement unit (IMU)': 'imu.md'
+      - 'Air Pressure and Temperature': 'press-temp.md'
+      - 'Electromyography (EMG)': 'emg.md'
+      - 'Time of Flight (TOF)': 'tof.md'
+      - 'Resistive Sensor': 'resis.md'
+      
+theme: readthedocs
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde

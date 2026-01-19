@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/press-temp%20save/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Barometric Pressure and Temperature Command - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Barometric Pressure and Temperature Command";
+        var mkdocs_page_input_path = "press-temp save.md";
+        var mkdocs_page_url = "/press-temp%20save/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Barometric Pressure and Temperature Command</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="barometric-pressure-and-temperature-command">Barometric Pressure and Temperature Command</h1>
+<p>Tag <code>0x50</code>-<code>0x5f</code> command for Barometric Pressure and Temperature function are explained in this page.</p>
+<hr />
+<h3 id="keyword">Keyword</h3>
+<blockquote>
+<p><strong>NA</strong>: Not applicable, this command should no be sent by the sensor/application.</p>
+<p><strong>None</strong>: No data contained in this command, data length can be set to 0x00.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x50">Tag <code>0x50</code></h3>
+<blockquote>
+<h4 id="meaning">Meaning:</h4>
+<p>Start air pressure and temperature streaming.</p>
+<h4 id="data-format-input">Data Format - Input:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">ODR</td>
+<td style="text-align: left;">Meas Mode</td>
+<td style="text-align: left;">OSR</td>
+<td style="text-align: left;">IIR Filter</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ODR (Output Data Rate)</strong>: Code listed below, set how many data output per second.</p>
+<p><strong>Meas Mode (Measurement Mode)</strong>: Code listed below, choose weather air pressure or temperature is measured.</p>
+<p><strong>OSR (Over Sampling Ratio)</strong>: Code listed below, higher over sampling ratio increase noise performance, but also increase current consume. Higher over sampling ratio support lower max ODR. Only apply on pressure measurement, if temperature only mode is chosen, fill this with OSR 512 (code: 0x0f).</p>
+<p><strong>IIR Filter</strong>: Code listed below, this is used to filter out pressure glitches due to sudden pressure
+changes caused by events such as slamming door or wind blowing on the sensor, but also make the sensor response to changes slower.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ODR / Hz</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0xff</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0x80</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">0x40</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">0x20</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">0x10</td>
+</tr>
+<tr>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">0x08</td>
+</tr>
+<tr>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">0x04</td>
+</tr>
+<tr>
+<td style="text-align: left;">128</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+<tr>
+<td style="text-align: left;">256</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Measurement Mode</th>
+<th style="text-align: left;">code</th>
+<th style="text-align: left;">Reply Tag</th>
+<th style="text-align: left;">tag info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">air pressure only</td>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;"><code>0x56</code></td>
+<td style="text-align: left;"><a href="../press-temp/#tag-0x56">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">air pressure only with time stamp</td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;"><code>0x56</code></td>
+<td style="text-align: left;"><a href="../press-temp/#tag-0x56">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">temperature only</td>
+<td style="text-align: left;">0x03</td>
+<td style="text-align: left;"><code>0x56</code></td>
+<td style="text-align: left;"><a href="../press-temp/#tag-0x56">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">temperature only with time stamp</td>
+<td style="text-align: left;">0x04</td>
+<td style="text-align: left;"><code>0x56</code></td>
+<td style="text-align: left;"><a href="../press-temp/#tag-0x56">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">air pressure and temperature</td>
+<td style="text-align: left;">0x05</td>
+<td style="text-align: left;"><code>0x56</code></td>
+<td style="text-align: left;"><a href="../press-temp/#tag-0x56">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">air pressure and temperature with time stamp</td>
+<td style="text-align: left;">0x06</td>
+<td style="text-align: left;"><code>0x56</code></td>
+<td style="text-align: left;"><a href="../press-temp/#tag-0x56">here</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Over Sampling Ratio</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Max ODR Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">512</td>
+<td style="text-align: left;">0x0f</td>
+<td style="text-align: left;">561Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">1024</td>
+<td style="text-align: left;">0x1f</td>
+<td style="text-align: left;">294Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">2048</td>
+<td style="text-align: left;">0x3f</td>
+<td style="text-align: left;">151Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">4096</td>
+<td style="text-align: left;">0x7f</td>
+<td style="text-align: left;">76Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">8191</td>
+<td style="text-align: left;">0xff</td>
+<td style="text-align: left;">38Hz</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">IIR Filter</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Step Response Rate (samples)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;">~2</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.3</td>
+<td style="text-align: left;">0x03</td>
+<td style="text-align: left;">~3</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.4</td>
+<td style="text-align: left;">0x04</td>
+<td style="text-align: left;">~4</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.5</td>
+<td style="text-align: left;">0x05</td>
+<td style="text-align: left;">~6</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.6</td>
+<td style="text-align: left;">0x06</td>
+<td style="text-align: left;">~8</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.7</td>
+<td style="text-align: left;">0x07</td>
+<td style="text-align: left;">~12</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.8</td>
+<td style="text-align: left;">0x08</td>
+<td style="text-align: left;">~20</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.9</td>
+<td style="text-align: left;">0x09</td>
+<td style="text-align: left;">~45</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-format-output">Data Format - Output:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x51">Tag <code>0x51</code></h3>
+<blockquote>
+<h4 id="meaning_1">Meaning:</h4>
+<p>Stop air pressure and temperature streaming.</p>
+<h4 id="data-format-input_1">Data Format - Input:</h4>
+<p>None.</p>
+<h4 id="data-format-output_1">Data Format - Output:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x56">Tag <code>0x56</code></h3>
+<blockquote>
+<h4 id="meaning_2">Meaning:</h4>
+<p>Measured air pressure and temperature reply through streaming with this tag.</p>
+<h4 id="data-format-input_2">Data Format - Input:</h4>
+<p>NA.</p>
+<h4 id="data-format-output_2">Data Format - Output:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4 (optional)</th>
+<th style="text-align: left;">4 (optional)</th>
+<th style="text-align: left;">8 (optional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Air Pressure Value</td>
+<td style="text-align: left;">Temperature Value</td>
+<td style="text-align: left;">Time Stamp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Air Pressure Value</strong>: Two's complement integer with 4 bytes length. Use the following equation to calculate the air pressure in kPa:</p>
+<p>P(kPa) = (Air Pressure Value / 131072) * 40 + 70</p>
+<p><strong>Temperature Value</strong>: Two's complement integer with 4 bytes length. Use the following equation to calculate the temperature in C:</p>
+<p>T(C) = (Temperature Value / 262144) * 65 + 25</p>
+<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. This timer might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
+<p>All optional bytes will appear when the corresponding Measurement Mode is selected.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x5a">Tag <code>0x5A</code></h3>
+<blockquote>
+<h4 id="meaning_3">Meaning:</h4>
+<p>Start offline record. Record data without Bluetooth connection.</p>
+<h4 id="data-format-input_3">Data Format - Input:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Data Selection</td>
+<td style="text-align: left;">Period</td>
+<td style="text-align: left;">Storage</td>
+<td style="text-align: left;">Stop Adv</td>
+<td style="text-align: left;">Current Unix Time</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data Selection</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Period</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pressure data only</td>
+<td style="text-align: left;">0x00</td>
+<td style="text-align: left;">1 min</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Temperature data only</td>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;">2 min</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pressure and temperature data</td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;">3 min</td>
+<td style="text-align: left;">0x03</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">5 min</td>
+<td style="text-align: left;">0x05</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">10 min</td>
+<td style="text-align: left;">0x0a</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">15 min</td>
+<td style="text-align: left;">0x0f</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">30 min</td>
+<td style="text-align: left;">0x1e</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1 hour</td>
+<td style="text-align: left;">0x3c</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2 hour</td>
+<td style="text-align: left;">0x3d</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4 hour</td>
+<td style="text-align: left;">0x40</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">8 hour</td>
+<td style="text-align: left;">0x44</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Storage:</strong> Storage location. If 0x00, data will store to EEPROM, if 0x01, data store to SD card. Note that some model don't have SD card slot.</p>
+<p><strong>Stop Adv:</strong> Stop Advertising Code. If 0x01, BLE advertising will stop during recording for power saving, advertising reactivate on charging. If 0x00, advertising continue during recording.</p>
+<p><strong>Current Unix Time:</strong> Input the current Unix Time in second, in format of 8 bytes, for recording date and time calculation.</p>
+<p>Sensor will auto disconnect and start recording after this command. Please wait for disconnect and don't send any other command after this command, sensor might need some time to prepare the storage.</p>
+<p>For data reading, refer to the <a href="../storage/#tag-0x40">storage</a> command page.</p>
+<h4 id="data-format-output_3">Data Format - Output:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x5b">Tag <code>0x5B</code></h3>
+<blockquote>
+<h4 id="meaning_4">Meaning:</h4>
+<p>Stop offline recording.</p>
+<h4 id="data-format-input_4">Data Format - Input:</h4>
+<p>None.</p>
+<h4 id="data-format-output_4">Data Format - Output:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x5c">Tag <code>0x5C</code></h3>
+<blockquote>
+<h4 id="meaning_5">Meaning:</h4>
+<p>Get</p>
+<h4 id="data-format-input_5">Data Format - Input:</h4>
+<p>None.</p>
+<h4 id="data-format-output_5">Data Format - Output:</h4>
+<p>Same as send format. Same format will acknowledge after command is executed.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

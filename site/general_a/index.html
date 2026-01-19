@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/general_a/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>General Command - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "General Command";
+        var mkdocs_page_input_path = "general_a.md";
+        var mkdocs_page_url = "/general_a/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">General Command</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="general-command">General Command</h1>
+<p>Tag <code>0x00</code>-<code>0x2f</code> command for general use, battery and LED are explained in this page.</p>
+<hr />
+<h3 id="keyword">Keyword</h3>
+<blockquote>
+<p><strong>NA</strong>: Not applicable, this command should no be sent by the sensor/application.</p>
+<p><strong>None</strong>: No data contained in this command, data length can be set as 0x00.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x00">Tag <code>0x00</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Get/reply Product ID.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Product ID</td>
+</tr>
+</tbody>
+</table>
+<p>Different sensor have the following product ID:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sensor Series</th>
+<th style="text-align: left;">Product ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A Series</td>
+<td style="text-align: left;">0x41</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x01">Tag <code>0x01</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Ping message, sensor will reply a ping message if it get ping.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong><br />
+NA</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x02">Tag <code>0x02</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Ping reply, sensor will reply to a ping with this tag.</p>
+<p><strong>Data format - app send:</strong><br />
+NA</p>
+<p><strong>Data format - app receive:</strong><br />
+None</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x03">Tag <code>0x03</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Error, sensor will send this message when any error happened.</p>
+<p><strong>Data format - app send:</strong><br />
+NA</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Error Code</td>
+</tr>
+</tbody>
+</table>
+<p>Different error code have the following meaning:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error Code</th>
+<th style="text-align: left;">Error Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0x00</td>
+<td style="text-align: left;">General Command Format Error</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;">SPI Error</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;">I2C Error</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x03</td>
+<td style="text-align: left;">IMU Error</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x04</td>
+<td style="text-align: left;">LED Error</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x05</td>
+<td style="text-align: left;">Magnetometer Error</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x04">Tag <code>0x04</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Hello message, for some specific function only.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong><br />
+None</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x05">Tag <code>0x05</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+SPI read/reply, do a SPI read at the sensor.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">SPI bus ID and CS number</td>
+<td style="text-align: left;">register address</td>
+<td style="text-align: left;">read length</td>
+</tr>
+</tbody>
+</table>
+<p>For the first data byte, upper 4 bits is SPI bus ID and Lower 4 bits is CS number, it is for choosing which SPI bus and SPI device is going to read.</p>
+<p>Length of the data read should be less than 20 bytes each time.</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">depend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">data read from SPI</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x06">Tag <code>0x06</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+SPI write/reply, do a SPI write at the sensor.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">depend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">SPI bus ID and CS number</td>
+<td style="text-align: left;">register address</td>
+<td style="text-align: left;">data to write</td>
+</tr>
+</tbody>
+</table>
+<p>For the first data byte, upper 4 bits is SPI bus ID and Lower 4 bits is CS number, it is for choosing which SPI bus and SPI device is going to write.</p>
+<p>Length of the data write should be less than 20 bytes each time.</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">data written length</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x07">Tag <code>0x07</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+I2C read/reply, do a I2C read at the sensor.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">I2C bus ID</td>
+<td style="text-align: left;">I2C slave address</td>
+<td style="text-align: left;">register address</td>
+<td style="text-align: left;">read length</td>
+</tr>
+</tbody>
+</table>
+<p>I2C bus ID choose which I2C bus is using, if there are more than one I2C bus one the controller. If there are only one I2C bus, use 0x00 as the bus ID.</p>
+<p>I2C slave address is a 7 bits address specified by the I2C device</p>
+<p>Please also include the last read/write bit as 0 when sending this command. For example, if the slave address is 0b0100101, the I2C slave address byte should be 0b01001010, which is 0x4a.</p>
+<p>Length of the data read should be less than 20 bytes each time.</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">depend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">data read from I2C</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x08">Tag <code>0x08</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+I2C write/reply, do a I2C write at the sensor.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">depend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">I2C bus ID</td>
+<td style="text-align: left;">I2C slave address</td>
+<td style="text-align: left;">register address</td>
+<td style="text-align: left;">data to write</td>
+</tr>
+</tbody>
+</table>
+<p>I2C bus ID choose which I2C bus is using, if there are more than one I2C bus one the controller. If there are only one I2C bus, use 0x00 as the bus ID.</p>
+<p>I2C slave address is a 7 bits address specified by the I2C device</p>
+<p>Please also include the last read/write bit as 0 when sending this command. For example, if the slave address is 0b0100101, the I2C slave address byte should be 0b01001010, which is 0x4a.</p>
+<p>Length of the data write should be less than 20 bytes each time.</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">data written length</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x09">Tag <code>0x09</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Enter ship mode, wake on charging.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong><br />
+None.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x10"><code>Tag 0x10</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply current battery charging status.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">charging status</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">charging status</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">not under charging</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">charging</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h3 id="tag-0x11"><code>Tag 0x11</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply current battery level.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">battery level (%)</td>
+</tr>
+</tbody>
+</table>
+<p>Battery level returned in float, unit is %.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x12">Tag <code>0x12</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply battery voltage.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">battery voltage (V)</td>
+</tr>
+</tbody>
+</table>
+<p>Battery voltage returned in float, unit is V.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x13">Tag <code>0x13</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply battery current.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">battery current (A)</td>
+</tr>
+</tbody>
+</table>
+<p>Battery current returned in float, unit is A.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x14"><code>Tag 0x14</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply battery capacity.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">battery capacity (mAh)</td>
+</tr>
+</tbody>
+</table>
+<p>Battery capacity returned in float, unit is mAh.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x15"><code>Tag 0x15</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply battery estimated time to empty for the application under present load conditions.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">estimated time to empty (s)</td>
+</tr>
+</tbody>
+</table>
+<p>Estimated time to empty returned in float, unit is second(s). Maximum value is 368634.24s.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x16"><code>Tag 0x16</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+ask/reply battery estimated time to full for the application under present charge conditions.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">estimated time to full (s)</td>
+</tr>
+</tbody>
+</table>
+<p>Estimated time to full returned in float, unit is second(s). Maximum value is 368634.24s.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x20">Tag <code>0x20</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Get/report LED color to application.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Red value</td>
+<td style="text-align: left;">Green value</td>
+<td style="text-align: left;">Blue value</td>
+</tr>
+</tbody>
+</table>
+<p>Each RGB color code from 0-255.</p>
+<p>If need to close the LED, set all RGB color to 0.</p>
+<p>Sensor will also report the LED color to application actively every time the color changed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x21">Tag <code>0x21</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Set LED brightness.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">brightness value</td>
+</tr>
+</tbody>
+</table>
+<p>Brightness value has 1 byte length, unsign integer, range from 0-100. The default brightness is 30.</p>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Sensor will acknowledge the LED brightness after brightness has been set.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x22">Tag <code>0x22</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Set LED color. Every time LED color set manually, the control by the system to LED will stop. System won't control the LED color anymore, the color user set will last forever, until user change to another color or the LED restore default command <code>0x23</code> is send.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Red value</td>
+<td style="text-align: left;">Green value</td>
+<td style="text-align: left;">Blue value</td>
+</tr>
+</tbody>
+</table>
+<p>Each RGB color code from 0-255.</p>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge to the user after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x23">Tag <code>0x23</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+LED restore default command. User release the LED control, let system change the LED color to its default behavior again.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge to the user after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x24">Tag <code>0x24</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Display/Stop LED pattern. This command also let user to take LED control, use "stop display all pattern" command or LED restore default command <code>0x23</code> to release control.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">LED Pattern</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">LED Pattern</th>
+<th style="text-align: left;">Pattern Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0x00</td>
+<td style="text-align: left;">Stop display all pattern</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;">RGB Color Shift</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge to the user after command is executed.</p>
+</blockquote>
+<hr />
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

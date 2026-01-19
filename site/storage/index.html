@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/storage/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Storage - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Storage";
+        var mkdocs_page_input_path = "storage.md";
+        var mkdocs_page_url = "/storage/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Storage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#keyword">Keyword</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x40">Tag 0x40</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input">Data Format - Input:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output">Data Format - Output:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x41">Tag 0x41</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning_1">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input_1">Data Format - Input:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output_1">Data Format - Output:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x42">Tag 0x42</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#meaning_2">Meaning:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-input_2">Data Format - Input:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-format-output_2">Data Format - Output:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Sensor Command B-Series</li>
+      <li class="breadcrumb-item active">Storage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="storage-command">Storage Command</h1>
+<p>Tag <code>0x40</code>-<code>0x4f</code> command for storage function are explained in this page.</p>
+<hr />
+<h3 id="keyword">Keyword</h3>
+<blockquote>
+<p><strong>NA</strong>: Not applicable, this command should no be sent by the sensor/application.</p>
+<p><strong>None</strong>: No data contained in this command, data length can be set to 0x00.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x40">Tag <code>0x40</code></h3>
+<blockquote>
+<h4 id="meaning">Meaning:</h4>
+<p>Read offline recorded data status and header.</p>
+<h4 id="data-format-input">Data Format - Input:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Storage</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Storage</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">For Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Record Status</td>
+<td style="text-align: left;">0x00</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">EEPROM Header</td>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;">Press and Temp</td>
+</tr>
+<tr>
+<td style="text-align: left;">SD Card Header</td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;">IMU or Resistive Sensor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-format-output">Data Format - Output:</h4>
+<p>If storage selected Record Status (0x00):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Record Status</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Record Status</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Storage Record Off</td>
+<td style="text-align: left;">0x00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Storage Record On</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Storage Record On with no Adv</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+</tbody>
+</table>
+<p>If storage selected header (0x01 or 0x02):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Data Type</td>
+<td style="text-align: left;">Data Period Tick</td>
+<td style="text-align: left;">Start Unix Time</td>
+<td style="text-align: left;">Start Sys Tick</td>
+<td style="text-align: left;">End Unix Time</td>
+<td style="text-align: left;">End Sys Tick</td>
+<td style="text-align: left;">Data Count</td>
+<td style="text-align: left;">Recording</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Type</strong> represent by setting the following bit to 1, means that data type is recorded.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bit Order</th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">9</th>
+<th style="text-align: left;">10</th>
+<th style="text-align: left;">11-15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Data Type</td>
+<td style="text-align: left;">Accel XYZ</td>
+<td style="text-align: left;">Gyro XYZ</td>
+<td style="text-align: left;">Mag XYZ</td>
+<td style="text-align: left;">Quat WXYZ</td>
+<td style="text-align: left;">Press and Temp</td>
+<td style="text-align: left;">Resis CH0</td>
+<td style="text-align: left;">Resis CH1</td>
+<td style="text-align: left;">Resis CH2</td>
+<td style="text-align: left;">Resis CH3</td>
+<td style="text-align: left;">Resis CH4</td>
+<td style="text-align: left;">Resis CH5</td>
+<td style="text-align: left;">Reserve</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Accel XYZ</td>
+<td style="text-align: left;">Float + FLoat + Float</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Accelerometer Data</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gyro XYZ</td>
+<td style="text-align: left;">Float + FLoat + Float</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Gyroscope Data</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mag XYZ</td>
+<td style="text-align: left;">Float + FLoat + Float</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Magnetometer Data</td>
+</tr>
+<tr>
+<td style="text-align: left;">Quat WXYZ</td>
+<td style="text-align: left;">Float + FLoat + Float + Float</td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">Quaternion 6x or 9x</td>
+</tr>
+<tr>
+<td style="text-align: left;">Press and Temp</td>
+<td style="text-align: left;">Float + Float</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Air Pressure and Temperature Data</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resis CHX</td>
+<td style="text-align: left;">Signed Integer</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Resistive Sensor Data</td>
+</tr>
+</tbody>
+</table>
+<p>If <strong>End Sys Tick</strong> is 0x00, means sensor is recording.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x41">Tag <code>0x41</code></h3>
+<blockquote>
+<h4 id="meaning_1">Meaning:</h4>
+<p>Quarter page read data from storage.</p>
+<h4 id="data-format-input_1">Data Format - Input:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Storage</td>
+<td style="text-align: left;">Storage Address</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Storage</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EEPROM</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">SD Card</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Storage Address:</strong> Page address of the storage, each page has 512 bytes.</p>
+<h4 id="data-format-output_1">Data Format - Output:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">128</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data:</strong> 128 bytes length for each read, call this command 4 times to read a complete 512 bytes page.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x42">Tag <code>0x42</code></h3>
+<blockquote>
+<h4 id="meaning_2">Meaning:</h4>
+<p>Quarter page write to storage.</p>
+<h4 id="data-format-input_2">Data Format - Input:</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">128</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Storage</td>
+<td style="text-align: left;">Storage Address</td>
+<td style="text-align: left;">Data</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Storage</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EEPROM</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">SD Card</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Storage Address:</strong> Page address of the storage, each page has 512 bytes.</p>
+<p><strong>Data:</strong> Data write to the storage.</p>
+<p>Call this command 4 times at same address to write one page storage.</p>
+<h4 id="data-format-output_2">Data Format - Output:</h4>
+<p>None.</p>
+<p>Acknowledge to host means ready to receive next data.</p>
+</blockquote>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../led/" class="btn btn-neutral float-left" title="LED"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../imu/" class="btn btn-neutral float-right" title="Inertial measurement unit (IMU)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../led/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../imu/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/emg/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Electromyography (EMG) - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Electromyography (EMG)";
+        var mkdocs_page_input_path = "emg.md";
+        var mkdocs_page_url = "/emg/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Electromyography (EMG)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#keyword">Keyword</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x70">Tag 0x70</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x71">Tag 0x71</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x72">Tag 0x72</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x76">Tag 0x76</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tag-0x77">Tag 0x77</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Sensor Command B-Series</li>
+      <li class="breadcrumb-item active">Electromyography (EMG)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="emg-command">EMG Command</h1>
+<p>Tag <code>0x70</code>-<code>0x7f</code> command for Electromyography (EMG) function are explained in this page.</p>
+<hr />
+<h3 id="keyword">Keyword</h3>
+<blockquote>
+<p><strong>NA</strong>: Not applicable, this command should no be sent by the sensor/application.</p>
+<p><strong>None</strong>: No data contained in this command, data length can be set to 0x00.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x70">Tag <code>0x70</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Start EMG streaming with specific configuration. Recording continue until user call the stop recording command tag <code>0x71</code>. Data replay from EMG sensor will use tag <code>0x76</code>-<code>0x77</code>.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">ODR</td>
+<td style="text-align: left;">Reply Format</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output Data Rate (ODR)</strong>: Output Data Rate of the EMG value while streaming, listed on the table below.</p>
+<p><strong>Reply Format</strong>: There are 2 different format, each of them can output with time stamp or not.</p>
+<ul>
+<li>
+<p><em>Standard Mode</em>: 12-bits accuracy, 16 data are output each notification, FIFO order</p>
+</li>
+<li>
+<p><em>Accumulate Mode</em>: 16-bits accuracy, one data is output each notification. Note that the output data rate is divided 16 under this mode, because of 16 12-bits data is accumulated into one 16-bits data.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ODR (Hz)</th>
+<th style="text-align: left;">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">0xd2</td>
+</tr>
+<tr>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">0x69</td>
+</tr>
+<tr>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">0x35</td>
+</tr>
+<tr>
+<td style="text-align: left;">400</td>
+<td style="text-align: left;">0x1a</td>
+</tr>
+<tr>
+<td style="text-align: left;">600</td>
+<td style="text-align: left;">0x12</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Reply Format</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Tag Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Standard</td>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;"><a href="./#tag-0x76">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Standard with Time Stamp</td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;"><a href="./#tag-0x76">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Accumulate</td>
+<td style="text-align: left;">0x03</td>
+<td style="text-align: left;"><a href="./#tag-0x77">here</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Accumulate with Time Stamp</td>
+<td style="text-align: left;">0x04</td>
+<td style="text-align: left;"><a href="./#tag-0x77">here</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x71">Tag <code>0x71</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong>
+Stop EMG data streaming.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge to the user after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x72">Tag <code>0x72</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong>
+Return the EMG value in integer.</p>
+<p><strong>Data format - app send:</strong><br />
+NA</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">EMG value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EMG value</strong>: Integer. Value from 0 to 10000, higher value mean stronger EMG signal is measured.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x76">Tag <code>0x76</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong>
+Return 16 EMG value in a single read.</p>
+<p><strong>Data format - app send:</strong><br />
+NA</p>
+<p><strong>Data format - app receive:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">32</th>
+<th style="text-align: left;">8 (optional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">EMG Value</td>
+<td style="text-align: left;">Time Stamp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EMG value</strong>: 16 EMG value in unsigned integer, 2 bytes each, little endian. Use the following equation to convert it to mV measured:</p>
+<p>EMG(mV) = ((EMG Value / 4095 * 3.3) - 1.65) / Gain</p>
+<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x77">Tag <code>0x77</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong>
+Return EMG value in mV.</p>
+<p><strong>Data format - app send:</strong><br />
+NA</p>
+<p><strong>Data format - app receive:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">8 (optional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">EMG value</td>
+<td style="text-align: left;">Time Stamp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EMG value</strong>: EMG value in unsigned integer, little endian. Use the following equation to convert it to mV measured:</p>
+<p>EMG(mV) = ((EMG Value / 65535 * 3.3) - 1.65) / Gain</p>
+<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
+</blockquote>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../press-temp/" class="btn btn-neutral float-left" title="Air Pressure and Temperature"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tof/" class="btn btn-neutral float-right" title="Time of Flight (TOF)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../press-temp/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tof/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/als/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>ALS Command - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ALS Command";
+        var mkdocs_page_input_path = "als.md";
+        var mkdocs_page_url = "/als/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-t10/">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">ALS Command</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="als-command">ALS Command</h1>
+<p>Tag <code>0x50</code>-<code>0x5f</code> command for ambient light sensor(ALS), used to detect light intensity.</p>
+<hr />
+<h3 id="keyword">Keyword</h3>
+<blockquote>
+<p><strong>NA</strong>: Not applicable, this command should no be sent by the sensor/application.</p>
+<p><strong>None</strong>: No data contained in this command, data length can be set as 0x00.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x50">Tag <code>0x50</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Configure and start ALS with parameters. Use this command before getting data from the ALS.</p>
+<p><strong>Data format - app send:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">A Time</td>
+<td style="text-align: left;">W Time</td>
+<td style="text-align: left;">A Gain</td>
+<td style="text-align: left;">GA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A Time</strong>: ALS integration time. Options refer to code below.<br />
+<strong>W Time</strong>: ALS wait time, time between each integration. Options refer to code below.<br />
+<strong>A Gain</strong>: Gain of the output data, used at low light intensity environment. Options refer to code below.<br />
+<strong>GA</strong>: Glass attenuation. Used to compensate for attenuation, for a device in open air with no aperture or glass/plastic above the device, GA = 1. This is a float number.  </p>
+<p>One measurement cycle ~= (A Time + W Time)</p>
+<p>Data will not stream to the application automatically, command tag <code>0x52</code> need to be used to get the ALS illuminance data.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">A Time</th>
+<th style="text-align: left;">A Time Code</th>
+<th style="text-align: left;">W Time</th>
+<th style="text-align: left;">W Time Code</th>
+<th style="text-align: left;">A Gain</th>
+<th style="text-align: left;">A Gain Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">50ms</td>
+<td style="text-align: left;">0xee</td>
+<td style="text-align: left;">0ms</td>
+<td style="text-align: left;">0xffff</td>
+<td style="text-align: left;">x0.16</td>
+<td style="text-align: left;">0x04</td>
+</tr>
+<tr>
+<td style="text-align: left;">100ms</td>
+<td style="text-align: left;">0xdb</td>
+<td style="text-align: left;">10ms</td>
+<td style="text-align: left;">0x00fc</td>
+<td style="text-align: left;">x1</td>
+<td style="text-align: left;">0x00</td>
+</tr>
+<tr>
+<td style="text-align: left;">150ms</td>
+<td style="text-align: left;">0xc9</td>
+<td style="text-align: left;">20ms</td>
+<td style="text-align: left;">0x00f9</td>
+<td style="text-align: left;">x8</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">200ms</td>
+<td style="text-align: left;">0xb7</td>
+<td style="text-align: left;">50ms</td>
+<td style="text-align: left;">0x00ee</td>
+<td style="text-align: left;">x16</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+<tr>
+<td style="text-align: left;">250ms</td>
+<td style="text-align: left;">0xa4</td>
+<td style="text-align: left;">100ms</td>
+<td style="text-align: left;">0x00db</td>
+<td style="text-align: left;">x120</td>
+<td style="text-align: left;">0x03</td>
+</tr>
+<tr>
+<td style="text-align: left;">300ms</td>
+<td style="text-align: left;">0x92</td>
+<td style="text-align: left;">200ms</td>
+<td style="text-align: left;">0x00b7</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">350ms</td>
+<td style="text-align: left;">0x80</td>
+<td style="text-align: left;">500ms</td>
+<td style="text-align: left;">0x0049</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">400ms</td>
+<td style="text-align: left;">0x6d</td>
+<td style="text-align: left;">1000ms</td>
+<td style="text-align: left;">0x01e1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">450ms</td>
+<td style="text-align: left;">0x5b</td>
+<td style="text-align: left;">2000ms</td>
+<td style="text-align: left;">0x01c3</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">500ms</td>
+<td style="text-align: left;">0x49</td>
+<td style="text-align: left;">5000ms</td>
+<td style="text-align: left;">0x0167</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">550ms</td>
+<td style="text-align: left;">0x37</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">600ms</td>
+<td style="text-align: left;">0x24</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">650ms</td>
+<td style="text-align: left;">0x12</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">700ms</td>
+<td style="text-align: left;">0x00</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge to the user after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x51">Tag <code>0x51</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Stop and power down ALS. This command will also execute by the sensor when disconnected.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong><br />
+Same as send format.</p>
+<p>Same format will acknowledge to the user after command is executed.</p>
+</blockquote>
+<hr />
+<h3 id="tag-0x52">Tag <code>0x52</code></h3>
+<blockquote>
+<p><strong>Meaning:</strong><br />
+Get/reply ALS illuminance data, in unit of lux.</p>
+<p><strong>Data format - app send:</strong><br />
+None</p>
+<p><strong>Data format - app receive:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Byte Length</th>
+<th style="text-align: left;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Meaning</strong></td>
+<td style="text-align: left;">Lux</td>
+</tr>
+</tbody>
+</table>
+<p>The returned lux is a float value.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

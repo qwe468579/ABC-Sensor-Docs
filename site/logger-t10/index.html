@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.activebiotech.com.hk/logger-t10/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>T10 - Temp, Humidity, Air Press - ActiveBiotech - Sensor documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T10 - Temp, Humidity, Air Press";
+        var mkdocs_page_input_path = "logger-t10.md";
+        var mkdocs_page_url = "/logger-t10/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ActiveBiotech - Sensor documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduce</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">BLE Sensor</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logger</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">T10 - Temp, Humidity, Air Press</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#layout">Layout</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#technical-specification">Technical Specification</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#general-details">General Details</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#temperature-sensor">Temperature Sensor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#humidity-sensor">Humidity Sensor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#air-pressure-sensor">Air Pressure Sensor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#battery-and-storage-life">Battery and Storage Life</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#operation-flow-chart">Operation Flow Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-concept">Key Concept</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#modes">Modes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#setting-mode">SETTING MODE</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sleep-mode">SLEEP MODE</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#recording-mode">RECORDING MODE</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear-internal-storage-and-restart">Clear Internal Storage and Restart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#replacing-battery">Replacing Battery</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exporting-data">Exporting Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#timestamp">TimeStamp</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collector</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../collector-t10.md">T10 - Temp, Humidity, Air Press</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-a10.md">A10 - Acceleration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-r10.md">R10 - Resistive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../module_mcu.md">MCU Module</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development Tool</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../logger-data-reader.md">LOGGER Data Reader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Communication Interface</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../led/">LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imu/">Inertial measurement unit (IMU)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../press-temp/">Air Pressure and Temperature</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../emg/">Electromyography (EMG)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tof/">Time of Flight (TOF)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resis/">Resistive Sensor</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ActiveBiotech - Sensor documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Logger</li>
+      <li class="breadcrumb-item active">T10 - Temp, Humidity, Air Press</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="logger-t10-temperature-humidity-air-pressure">Logger - T10 (Temperature, Humidity, Air Pressure)</h1>
+<p><img alt="T10 Case - top45" src="../images/T10%20Case%20-%20top45.png" /></p>
+<h3 id="description">Description</h3>
+<p>The Logger Series is a remarkably compact and slim sensor designed for uninterrupted, offline data recording over extended periods. Powered by a high-density, non-rechargeable lithium battery, each unit can continuously log data for up to three years. It's lightweight form makes it ideal for integration into wearable devices. It also serves as a reliable tool for scientific research. Onboard memory securely stores readings until you're ready to retrieve them. Data extraction is seamless simply dock the logger into its dedicated reader to offload and review your results.</p>
+<p>The Logger-T10 is a sensor in Logger Series designed to record temperature, humidity, and air pressure data with precision.</p>
+<h3 id="layout">Layout</h3>
+<p><img alt="T10 Case - Layout" src="../images/T10%20Case%20-%20Layout.png" /></p>
+<h3 id="technical-specification">Technical Specification</h3>
+<blockquote>
+<h4 id="general-details">General Details</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Size</strong></td>
+<td style="text-align: left;">24mm x 24mm x 6.2mm</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Battery Type</strong></td>
+<td style="text-align: left;">CR1625 Non-Rechargeable Lithium Battery</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Battery Capacity</strong></td>
+<td style="text-align: left;">90mAh</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Battery Life (recording)</strong></td>
+<td style="text-align: left;">~2 years</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Type</strong></td>
+<td style="text-align: left;">Temperature, Humidity, Air Pressure</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Recording Period</strong></td>
+<td style="text-align: left;">1s to 1hour</td>
+</tr>
+</tbody>
+</table>
+<h4 id="temperature-sensor">Temperature Sensor</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Temperature Range</strong></td>
+<td style="text-align: left;">-10&deg;C to 50&deg;C</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Temperature Resolution</strong></td>
+<td style="text-align: left;">16 bits</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Temperature Accuracy</strong></td>
+<td style="text-align: left;">&#177; 0.1&deg;C</td>
+</tr>
+</tbody>
+</table>
+<h4 id="humidity-sensor">Humidity Sensor</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Humidity Range</strong></td>
+<td style="text-align: left;">0% to 100%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Humidity Resolution</strong></td>
+<td style="text-align: left;">16 bits</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Humidity Accuracy</strong></td>
+<td style="text-align: left;">&#177; 0.15%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="air-pressure-sensor">Air Pressure Sensor</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Air Pressure Range</strong></td>
+<td style="text-align: left;">260 to 126kPa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Air Pressure Resolution</strong></td>
+<td style="text-align: left;">24 bits</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Air Pressure Accuracy</strong></td>
+<td style="text-align: left;">&#177; 0.02kPa</td>
+</tr>
+</tbody>
+</table>
+<h4 id="battery-and-storage-life">Battery and Storage Life</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Period</th>
+<th style="text-align: left;">Storage Capacity Life</th>
+<th style="text-align: left;">Battery Life</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1min</td>
+<td style="text-align: left;">1.14 years</td>
+<td style="text-align: left;">2.43 years</td>
+</tr>
+<tr>
+<td style="text-align: left;">5min</td>
+<td style="text-align: left;">&gt;3.35 years</td>
+<td style="text-align: left;">3.35 years</td>
+</tr>
+<tr>
+<td style="text-align: left;">15min</td>
+<td style="text-align: left;">&gt;3.5 years</td>
+<td style="text-align: left;">3.5 years</td>
+</tr>
+<tr>
+<td style="text-align: left;">30min</td>
+<td style="text-align: left;">&gt;3.5 years</td>
+<td style="text-align: left;">3.5 years</td>
+</tr>
+<tr>
+<td style="text-align: left;">1hour</td>
+<td style="text-align: left;">&gt;3.5 years</td>
+<td style="text-align: left;">3.5 years</td>
+</tr>
+</tbody>
+</table>
+<p>Battery life is calculated under ideal situation, no operation during data recording. Operation like download data, restart the logger, blinking LED during recording will consume extra power and make the battery shorter than calculated.</p>
+</blockquote>
+<h3 id="operation-flow-chart">Operation Flow Chart</h3>
+<p><img alt="T10 Operation Flow Chart" src="../images/T10%20Operation%20Flow%20Chart.png" /></p>
+<h3 id="key-concept">Key Concept</h3>
+<blockquote>
+<h4 id="modes">Modes</h4>
+<p>There are 3 different modes for the logger, explained as follow:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Logger Mode</th>
+<th style="text-align: left;">Blink Indicate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SETTING MODE</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">SLEEP MODE</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">RECORDING MODE</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h5 id="setting-mode">SETTING MODE</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Settings</th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Meaning</td>
+<td style="text-align: left;">SLEEP</td>
+<td style="text-align: left;">1min</td>
+<td style="text-align: left;">5min</td>
+<td style="text-align: left;">15min</td>
+<td style="text-align: left;">30min</td>
+<td style="text-align: left;">1hour</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SETTING MODE</strong> enter at startup, allowing the user to configure the data logging interval. The mode begins at 0, which represents no button press. Each press of the setting pin-hole advances the logger to the next setting mode, cycling from 1 to 5. If the button is pressed while in mode 6, the logger loops back to mode 1. To indicate the current mode, the logger's LED blinks a number of times corresponding to the selected mode. It's important to wait until the LED finishes blinking before pressing the button again to avoid miss-selection. If no button is pressed for 15 seconds, the logger exits setting mode and applies the selected configuration to determine the sensor's next operational behavior.</p>
+<h5 id="sleep-mode">SLEEP MODE</h5>
+<p>When setting 0 is selected during <strong>SETTING MODE</strong>, the logger transitions into <strong>SLEEP MODE</strong>, effectively pausing all active operations. In this state, the logger remains idle but still accessible-external readers can communicate with it and issue commands. To check the current mode while in sleep, pressing the pin-hole button will trigger the LED to blink once, confirming that sleep mode is active. If the user wishes to restart the logger from sleep, they can press and hold the pin-hole button for more than 5 seconds, then release it, this action reactivates the logger.</p>
+<h5 id="recording-mode">RECORDING MODE</h5>
+<p>When modes 1 to 5 are selected in <strong>SETTING MODE</strong>, the logger automatically enters <strong>RECORDING MODE</strong>. In this mode, it logs data at the interval chosen during setup and stores each entry in internal storage. Pressing the pin-hole button causes the LED to blink twice, confirming that recording is active. The logger remains accessible throughout RECORDING MODE, so you can export data without interrupting the ongoing logging process.</p>
+</blockquote>
+<h4 id="clear-internal-storage-and-restart">Clear Internal Storage and Restart</h4>
+<p>There are two way to clear the storage, first is plug the logger into the reader socket and click the "Clear Internal Storage" button in the Logger Reader application. Once the clearing procedure finishes, the logger will automatically enter sleep mode, awaiting your next operation.</p>
+<p>Second is press the pin-hole button for 5s under <strong>SLEEP MODE</strong> and <strong>RECORDING MODE</strong>, logger will clear whole storage and restart.</p>
+<h4 id="replacing-battery">Replacing Battery</h4>
+<p>The logger use CR1625 lithium battery, simply plug a pin into the hole behind the the logger, push the battery out to replace a new battery.</p>
+<h4 id="exporting-data">Exporting Data</h4>
+<p>To export your logger's recorded data, plug it into the <strong>Logger Socket</strong>, launch the Logger Reader Application, and click the download button. The software will retrieve all stored measurements and automatically save them as an Excel (.xlsx) file in the same folder where the Logger Reader executable resides. The generated filename includes your logger's ID and recording dates for easy identification. It might takes about 10 minutes to download all data if the storage is full, download time depends on the amount of data recorded. After the export finishes, close the application and safely eject the logger to avoid any risk of file corruption.</p>
+<p><img alt="T10 Data Excel Pic" src="../images/T10%20Data%20Excel%20Pic.png" /></p>
+<h4 id="timestamp">TimeStamp</h4>
+<p>When you export data from the logger, each measurement is stamped with its exact date and time. However, if the battery depletes before you download the logged data, the timestamps will be missing. To guard against this risk-especially during long-term monitoring-it's recommended to note the exact start time of the recording session. With that reference, you can reconstruct or estimate any missing timestamps and preserve the continuity of your dataset.</p>
+</blockquote>
+<h1 id="logger-socket-and-data-reader-application">Logger Socket and Data Reader Application</h1>
+<p><img alt="T10 Socket - top45" src="../images/T10%20Socket%20-%20top45.png" /></p>
+<p>LOGGER Socket is the device that use to download recorded data from LOGGER-T10, there are display panel on the device that can display current temperature, humidity and air pressure when LOGGER-T10 is plugged in.</p>
+<p><img alt="Logger Reader Application 1" src="../images/Logger%20Reader%20Application%201.png" /></p>
+<p>LOGGER Data Reader is the software that work with the LOGGER Socket, use to export data or reset the logger. The application can be downloaded here:</p>
+<p><a href="../files/Logger%20Data%20Reader.exe">&gt;&gt;Download&lt;&lt;</a></p>
+<h3 id="how-to-use">How to Use</h3>
+<p><img alt="Logger Reader Download Data" src="../images/Logger%20Reader%20Download%20Data.png" /></p>
+<blockquote>
+<p>To download your data, connect the reader socket to your computer using a USB-C cable, attach the logger to the socket, then open the Logger Reader software and click the Download button. A progress indicator will appear during the transfer, once it finished, you can safely unplug the logger.</p>
+<p>To reset the logger, follow the same procedure as download data, and then press the Reset Logger button. Once the logger is reset, whole storage will clear, and then change to sleep mode.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ble-sensor-b10/" class="btn btn-neutral float-left" title="B10 - 10 Dof IMU"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../logger-socket/" class="btn btn-neutral float-right" title="LOGGER Socket">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ble-sensor-b10/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../logger-socket/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
