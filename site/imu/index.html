@@ -57,8 +57,6 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../logger-a10.md">A10 - Motion</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../logger-r10.md">R10 - Resistive Sensor</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../logger-socket/">LOGGER Socket</a>
                   </li>
               </ul>
@@ -117,8 +115,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#tag-0x37">Tag 0x37</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#tag-0x38">Tag 0x38</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#tag-0x39">Tag 0x39</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#tag-0x3a">Tag 0x3A</a>
         <ul>
@@ -393,40 +389,16 @@ Start recording from IMU. Recording continue until user call the stop recording 
 <td style="text-align: left;"><a href="./#tag-0x36">here</a></td>
 </tr>
 <tr>
-<td style="text-align: left;">Accel, Gyro and Mag with time stamp</td>
-<td style="text-align: left;">0x02</td>
-<td style="text-align: left;"><code>0x36</code></td>
-<td style="text-align: left;"><a href="./#tag-0x36">here</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Quaternion 6x</td>
-<td style="text-align: left;">0x03</td>
-<td style="text-align: left;"><code>0x37</code></td>
-<td style="text-align: left;"><a href="./#tag-0x37">here</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Quaternion 6x with time stamp</td>
-<td style="text-align: left;">0x04</td>
-<td style="text-align: left;"><code>0x37</code></td>
-<td style="text-align: left;"><a href="./#tag-0x37">here</a></td>
-</tr>
-<tr>
 <td style="text-align: left;">Quaternion 9x</td>
-<td style="text-align: left;">0x05</td>
-<td style="text-align: left;"><code>0x38</code></td>
-<td style="text-align: left;"><a href="./#tag-0x38">here</a></td>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;"><code>0x37</code></td>
+<td style="text-align: left;"><a href="./#tag-0x37">here</a></td>
 </tr>
 <tr>
-<td style="text-align: left;">Quaternion 9x with time stamp</td>
-<td style="text-align: left;">0x06</td>
+<td style="text-align: left;">Quaternion 9x with Accel value</td>
+<td style="text-align: left;">0x03</td>
 <td style="text-align: left;"><code>0x38</code></td>
 <td style="text-align: left;"><a href="./#tag-0x38">here</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Quaternion 9x with Accel value and time stamp</td>
-<td style="text-align: left;">0x07</td>
-<td style="text-align: left;"><code>0x39</code></td>
-<td style="text-align: left;"><a href="./#tag-0x39">here</a></td>
 </tr>
 </tbody>
 </table>
@@ -484,7 +456,7 @@ NA</p>
 <th style="text-align: left;">12</th>
 <th style="text-align: left;">12</th>
 <th style="text-align: left;">12</th>
-<th style="text-align: left;">8 (optional)</th>
+<th style="text-align: left;">4</th>
 </tr>
 </thead>
 <tbody>
@@ -500,37 +472,10 @@ NA</p>
 <p><strong>Accel Value</strong>: Float format, accelerometer(g) X, Y, Z axis value, each axis has 4 bytes length. Can be turn off by setting the ODR to 0x00.</p>
 <p><strong>Gyro Value</strong>: Float format, gyroscope(degree/s) X, Y, Z axis value, each axis has 4 bytes length. Can be turn off by setting the ODR to 0x00.</p>
 <p><strong>Mag Value</strong>: Float format, magnetometer(mGauss) X, Y, Z axis value, each axis has 4 bytes length. Only available when both accelerometer and gyroscope turn on. ODR and FS are auto selected.</p>
-<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
+<p><strong>Time Stamp</strong>: Unsigned Int, unit is 25us. Represent the data record time.</p>
 </blockquote>
 <hr />
 <h3 id="tag-0x37">Tag <code>0x37</code></h3>
-<blockquote>
-<p><strong>Meaning:</strong><br />
-Reply IMU data in quaternion data format. 6 axis (accel + gyro) are used to calculate the quaternion value.</p>
-<p><strong>Data format - app send:</strong><br />
-NA</p>
-<p><strong>Data format - app receive:</strong>  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Byte Length</th>
-<th style="text-align: left;">16</th>
-<th style="text-align: left;">8 (optional)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Meaning</strong></td>
-<td style="text-align: left;">Quaternion</td>
-<td style="text-align: left;">Time Stamp</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Quaternion</strong>: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.</p>
-<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
-</blockquote>
-<hr />
-<h3 id="tag-0x38">Tag <code>0x38</code></h3>
 <blockquote>
 <p><strong>Meaning:</strong><br />
 Reply IMU data in quaternion data format. 9 axis (accel + gyro + mag) are used to calculate the quaternion value.</p>
@@ -542,7 +487,7 @@ NA</p>
 <tr>
 <th style="text-align: left;">Byte Length</th>
 <th style="text-align: left;">16</th>
-<th style="text-align: left;">8 (optional)</th>
+<th style="text-align: left;">4</th>
 </tr>
 </thead>
 <tbody>
@@ -554,10 +499,10 @@ NA</p>
 </tbody>
 </table>
 <p><strong>Quaternion</strong>: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.</p>
-<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
+<p><strong>Time Stamp</strong>: Unsigned Long, unit is 25us. Represent the data record time.</p>
 </blockquote>
 <hr />
-<h3 id="tag-0x39">Tag <code>0x39</code></h3>
+<h3 id="tag-0x38">Tag <code>0x38</code></h3>
 <blockquote>
 <p><strong>Meaning:</strong><br />
 Reply IMU data in quaternion with Accel value data format. 9 axis (accel + gyro + mag) are used to calculate the quaternion value.</p>
@@ -568,23 +513,23 @@ NA</p>
 <thead>
 <tr>
 <th style="text-align: left;">Byte Length</th>
-<th style="text-align: left;">12</th>
 <th style="text-align: left;">16</th>
-<th style="text-align: left;">8</th>
+<th style="text-align: left;">12</th>
+<th style="text-align: left;">4</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Meaning</strong></td>
-<td style="text-align: left;">Accel Value</td>
 <td style="text-align: left;">Quaternion</td>
+<td style="text-align: left;">Accel Value</td>
 <td style="text-align: left;">Time Stamp</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Accel Value</strong>: Accelerometer(g) value separated in X, Y, Z axis, each axis has 4 bytes, all in Float format.</p>
 <p><strong>Quaternion</strong>: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.</p>
-<p><strong>Time Stamp</strong>: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.</p>
+<p><strong>Accel Value</strong>: Accelerometer(g) value separated in X, Y, Z axis, each axis has 4 bytes, all in Float format.</p>
+<p><strong>Time Stamp</strong>: Unsigned Long, unit is 25us.</p>
 </blockquote>
 <hr />
 <h3 id="tag-0x3a">Tag <code>0x3A</code></h3>

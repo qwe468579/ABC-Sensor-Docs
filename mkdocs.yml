@@ -5,12 +5,16 @@ nav:
    - Introduce:
       - Overview: 'index.md'
    - BLE Sensor:
-      - B10 - 10 Dof IMU: 'ble-sensor-b10.md'
-      - R10 - Resistive Sensor Reader: 'ble-sensor-r10.md'
+      - B10 - 10 Dof IMU:
+         - overview: 'ble-sensor-b10.md'
+         - BLE interface: 'bluetooth.md'
+         - Command: 'b10-command.md'
+      - R10 - Resistive Sensor:
+         - overview: 'ble-sensor-b10.md'
+         - BLE interface: 'bluetooth.md'
    - Logger:
       - 'T10 - Temp, Humidity, Air Press': 'logger-t10.md'
       - A10 - Motion: 'logger-a10.md'
-      - R10 - Resistive Sensor: 'logger-r10.md'
       - LOGGER Socket: 'logger-socket.md'
    - Collector:
       - 'T10 - Temp, Humidity, Air Press': 'collector-t10.md'

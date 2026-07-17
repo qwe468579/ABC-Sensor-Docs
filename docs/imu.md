@@ -31,7 +31,7 @@ Tag `0x30`-`0x3f` command for Inertial measurement unit (IMU) are explained in t
 > | ~~3333~~ | 0x09 | 8 | 0x03 |
 > | ~~1667~~ | 0x08 | 4 | 0x02 |
 > | ~~833~~ | 0x07 | 2 | 0x00 |
-> | ~~416~~ | 0x06 |
+> | 416 | 0x06 |
 > | 208 | 0x05 |
 > | 104 | 0x04 |
 > | 52 | 0x03 |
@@ -46,7 +46,7 @@ Tag `0x30`-`0x3f` command for Inertial measurement unit (IMU) are explained in t
 > | ~~3333~~ | 0x09 | 1000 | 0x02 |
 > | ~~1667~~ | 0x08 | 500 | 0x01 |
 > | ~~833~~ | 0x07 | 250 | 0x00 |
-> | ~~416~~ | 0x06 |
+> | 416 | 0x06 |
 > | 208 | 0x05 |
 > | 104 | 0x04 |
 > | 52 | 0x03 |
@@ -61,12 +61,8 @@ Tag `0x30`-`0x3f` command for Inertial measurement unit (IMU) are explained in t
 > | Reply data format | code | reply tag | tag info |
 > | :--- | :--- | :--- | :--- |
 > | Accel, Gyro and Mag | 0x01 | `0x36` | [here](imu.md#tag-0x36) |
-> | Accel, Gyro and Mag with time stamp | 0x02 | `0x36` | [here](imu.md#tag-0x36) |
-> | Quaternion 6x | 0x03 | `0x37` | [here](imu.md#tag-0x37) |
-> | Quaternion 6x with time stamp | 0x04 | `0x37` | [here](imu.md#tag-0x37) |
-> | Quaternion 9x | 0x05 | `0x38` | [here](imu.md#tag-0x38) |
-> | Quaternion 9x with time stamp | 0x06 | `0x38` | [here](imu.md#tag-0x38) |
-> | Quaternion 9x with Accel value and time stamp | 0x07 | `0x39` | [here](imu.md#tag-0x39) |
+> | Quaternion 9x | 0x02 | `0x37` | [here](imu.md#tag-0x37) |
+> | Quaternion 9x with Accel value | 0x03 | `0x38` | [here](imu.md#tag-0x38) |
 
 > IMU must not working on other mode when call this command.
 
@@ -121,41 +117,41 @@ Tag `0x30`-`0x3f` command for Inertial measurement unit (IMU) are explained in t
 
 > **Data format - app receive:**  
 
-> | Byte Length | 12 | 12 | 12 | 8 (optional) |
+> | Byte Length | 6 | 6 | 6 | 4 |
 > | :--- | :--- | :--- | :--- | :--- |
 > | **Meaning** | Accel Value | Gyro Value | Mag value | Time Stamp |
 
-> **Accel Value**: Float format, accelerometer(g) X, Y, Z axis value, each axis has 4 bytes length. Can be turn off by setting the ODR to 0x00.
+> **Accel Value**: Accelerometer X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.
 
-> **Gyro Value**: Float format, gyroscope(degree/s) X, Y, Z axis value, each axis has 4 bytes length. Can be turn off by setting the ODR to 0x00.
+> **Acceleration(g)** = **Accel Value** x **Sense Factor**
 
-> **Mag Value**: Float format, magnetometer(mGauss) X, Y, Z axis value, each axis has 4 bytes length. Only available when both accelerometer and gyroscope turn on. ODR and FS are auto selected.
+> | Accel FS / +-g | Sense Factor |
+> | :--- | :--- |
+> | 2 | 0.000061 |
+> | 4 | 0.000122 |
+> | 8 | 0.000244 |
+> | 16 | 0.000488 |
 
-> **Time Stamp**: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.
+> **Gyro Value**: Gyroscope X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.
+
+> **Angular Veolcity(degree/s)** = **Gyro Value** x **Sense Factor**
+
+> | Gyro FS / +-dps | Sense Factor |
+> | :--- | :--- |
+> | 250 | 0.00875 |
+> | 500 | 0.0175 |
+> | 1000 | 0.035 |
+> | 2000 | 0.07 |
+
+> **Mag Value**: Magnetometer X, Y, Z axis value as 16_bit-integer for each axis. Only available when both accelerometer and gyroscope turn on. ODR and FS are auto selected.
+
+> **Magnetic Strength(mG)** = **Mag Value** x **1.5**
+
+> **Time Stamp**: Unsigned Int, unit is 25us. Represent the data record time.
 
 ---
 
 ### Tag `0x37`
-
-> **Meaning:**  
-> Reply IMU data in quaternion data format. 6 axis (accel + gyro) are used to calculate the quaternion value.
-
-> **Data format - app send:**  
-> NA
-
-> **Data format - app receive:**  
-
-> | Byte Length | 16 | 8 (optional) |
-> | :--- | :--- | :--- |
-> | **Meaning** | Quaternion | Time Stamp |
-
-> **Quaternion**: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.
-
-> **Time Stamp**: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.
-
----
-
-### Tag `0x38`
 
 > **Meaning:**  
 > Reply IMU data in quaternion data format. 9 axis (accel + gyro + mag) are used to calculate the quaternion value.
@@ -165,17 +161,19 @@ Tag `0x30`-`0x3f` command for Inertial measurement unit (IMU) are explained in t
 
 > **Data format - app receive:**  
 
-> | Byte Length | 16 | 8 (optional) |
-> | :--- | :--- | :--- |
-> | **Meaning** | Quaternion | Time Stamp |
+> | Byte Length | 16 | 1 | 4 |
+> | :--- | :--- | :--- | :--- |
+> | **Meaning** | Quaternion | Mag Calibrate Level | Time Stamp |
 
 > **Quaternion**: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.
 
-> **Time Stamp**: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.
+> **Mag Calibrate Level**: Magnetometer calibration level for the sensor fusion algorithm, 0 is worst, 3 is best.
+
+> **Time Stamp**: Unsigned Int, unit is 25us. Represent the data record time.
 
 ---
 
-### Tag `0x39`
+### Tag `0x38`
 
 > **Meaning:**  
 > Reply IMU data in quaternion with Accel value data format. 9 axis (accel + gyro + mag) are used to calculate the quaternion value.
@@ -185,15 +183,17 @@ Tag `0x30`-`0x3f` command for Inertial measurement unit (IMU) are explained in t
 
 > **Data format - app receive:**  
 
-> | Byte Length | 12 | 16 | 8 |
-> | :--- | :--- | :--- | :--- |
-> | **Meaning** | Accel Value | Quaternion | Time Stamp |
-
-> **Accel Value**: Accelerometer(g) value separated in X, Y, Z axis, each axis has 4 bytes, all in Float format.
+> | Byte Length | 16 | 1 | 12 | 4 |
+> | :--- | :--- | :--- | :--- | :--- |
+> | **Meaning** | Quaternion | Mag Calibrate Level | Accel Value | Time Stamp |
 
 > **Quaternion**: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.
 
-> **Time Stamp**: Unsigned Long, unit is 2.4414us. Represent the data record time. Only appear when the "with time stamp" format is chosen. Pay attention that this value might not start from zero. Usually it is used to help synchronize data from multiple sensors or calculate the accurate data rate.
+> **Mag Calibrate Level**: Magnetometer calibration level for the sensor fusion algorithm, 0 is worst, 3 is best.
+
+> **Accel Value**: Accelerometer(g) value separated in X, Y, Z axis, each axis has 4 bytes, all in Float format.
+
+> **Time Stamp**: Unsigned Int, unit is 25us.
 
 ---
 
