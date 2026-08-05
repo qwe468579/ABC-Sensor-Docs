@@ -97,6 +97,31 @@ BLE-Sensor-B10 all command explained in this page.
 
 ---
 
+### Tag `0x22`
+
+> **Meaning:**	
+> Set LED color, can be set as static color or blinking pattern. This command will not override the sensor default LED behavior.
+
+> **Data format - app send:**  
+
+> | Byte Length | 1 | 1 | 1 | 1 (optional) | 1 (optional) | 1 (optional) |
+> | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+> | **Meaning** | Red Value | Green Value | Blue Value | Duty (optional) | Period (optional) | Delay (optional) |
+
+> **RGB Value**: Red, Green and Blue value in range 0-255.
+
+> **Duty**: Blinking duty from 25% to 75%, option are 25, 50, 75.
+
+> **Period**: Blinking period from 500ms to 4000ms, in range 0-9, 0 is 500ms, 9 is 5000ms.
+
+> **Delay**: LED off delay in s, in range 0-255, set to 0 LED will not turn off.
+
+> **Data format - app receive:**  
+
+> Same as send format. Same format acknowledge after command is executed.
+
+---
+
 ### Tag `0x30`
 
 > **Meaning:**	
@@ -149,7 +174,7 @@ BLE-Sensor-B10 all command explained in this page.
 > | Quaternion 9x | 0x02 | `0x37` | [here](imu.md#tag-0x37) |
 > | Quaternion 9x with Accel value | 0x03 | `0x38` | [here](imu.md#tag-0x38) |
 
-> IMU must not working on other mode when call this command.
+> IMU should not working on other mode when call this command.
 
 > **Data format - app receive:**  
 
