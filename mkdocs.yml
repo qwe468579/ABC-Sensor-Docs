@@ -24,10 +24,10 @@ nav:
    - Module:
       - Battery Charger Module: 'module-battery-charger.md'
       - DC-DC Module:
-	     - DC101: 'dc101.md'
-		 - DC102: 'dc102.md'
-		 - DC201: 'dc201.md'
-		 - DC202: 'dc202.md'
+         - DC101: 'dc101.md'
+         - DC102: 'dc102.md'
+         - DC201: 'dc201.md'
+         - DC202: 'dc202.md'
       - USB-UART Module: 'module-usb-uart.md'
       - MCU Module: 'module_mcu.md'
    - Development Tool:

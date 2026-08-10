@@ -46,9 +46,23 @@
               </ul>
               <p class="caption"><span class="caption-text">BLE Sensor</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../ble-sensor-b10/">B10 - 10 Dof IMU</a>
+                  <li class="toctree-l1"><a class="reference internal" >B10 - 10 Dof IMU</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../ble-sensor-b10/">overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../bluetooth/">BLE interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../b10-command/">Command</a>
+                </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../ble-sensor-r10.md">R10 - Resistive Sensor Reader</a>
+                  <li class="toctree-l1"><a class="reference internal" >R10 - Resistive Sensor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../ble-sensor-b10/">overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../bluetooth/">BLE interface</a>
+                </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Logger</span></p>
@@ -71,11 +85,21 @@
                   <li class="toctree-l1"><a class="" href="../collector-p10.md">P10 - PIR</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Developer Module</span></p>
+              <p class="caption"><span class="caption-text">Module</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../module-battery-charger/">Battery Charger Module</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../module-dc-dc.md">DC-DC Module</a>
+                  <li class="toctree-l1"><a class="reference internal" >DC-DC Module</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../dc101.md">DC101</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../dc102.md">DC102</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../dc201.md">DC201</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../dc202.md">DC202</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="" href="../module-usb-uart.md">USB-UART Module</a>
                   </li>
@@ -89,7 +113,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Communication Interface</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">Bluetooth</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../bluetooth/">BLE interface</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Sensor Command B-Series</span></p>
@@ -243,7 +267,7 @@ Start recording from IMU. Recording continue until user call the stop recording 
 <td style="text-align: left;">0x00</td>
 </tr>
 <tr>
-<td style="text-align: left;"><del>416</del></td>
+<td style="text-align: left;">416</td>
 <td style="text-align: left;">0x06</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
@@ -327,7 +351,7 @@ Start recording from IMU. Recording continue until user call the stop recording 
 <td style="text-align: left;">0x00</td>
 </tr>
 <tr>
-<td style="text-align: left;"><del>416</del></td>
+<td style="text-align: left;">416</td>
 <td style="text-align: left;">0x06</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
@@ -453,9 +477,9 @@ NA</p>
 <thead>
 <tr>
 <th style="text-align: left;">Byte Length</th>
-<th style="text-align: left;">12</th>
-<th style="text-align: left;">12</th>
-<th style="text-align: left;">12</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">6</th>
 <th style="text-align: left;">4</th>
 </tr>
 </thead>
@@ -469,9 +493,64 @@ NA</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Accel Value</strong>: Float format, accelerometer(g) X, Y, Z axis value, each axis has 4 bytes length. Can be turn off by setting the ODR to 0x00.</p>
-<p><strong>Gyro Value</strong>: Float format, gyroscope(degree/s) X, Y, Z axis value, each axis has 4 bytes length. Can be turn off by setting the ODR to 0x00.</p>
-<p><strong>Mag Value</strong>: Float format, magnetometer(mGauss) X, Y, Z axis value, each axis has 4 bytes length. Only available when both accelerometer and gyroscope turn on. ODR and FS are auto selected.</p>
+<p><strong>Accel Value</strong>: Accelerometer X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.</p>
+<p><strong>Acceleration(g)</strong> = <strong>Accel Value</strong> x <strong>Sense Factor</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Accel FS / +-g</th>
+<th style="text-align: left;">Sense Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0.000061</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">0.000122</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">0.000244</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">0.000488</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gyro Value</strong>: Gyroscope X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.</p>
+<p><strong>Angular Veolcity(degree/s)</strong> = <strong>Gyro Value</strong> x <strong>Sense Factor</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Gyro FS / +-dps</th>
+<th style="text-align: left;">Sense Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">250</td>
+<td style="text-align: left;">0.00875</td>
+</tr>
+<tr>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">0.0175</td>
+</tr>
+<tr>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">0.035</td>
+</tr>
+<tr>
+<td style="text-align: left;">2000</td>
+<td style="text-align: left;">0.07</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mag Value</strong>: Magnetometer X, Y, Z axis value as 16_bit-integer for each axis. Only available when both accelerometer and gyroscope turn on. ODR and FS are auto selected.</p>
+<p><strong>Magnetic Strength(mG)</strong> = <strong>Mag Value</strong> x <strong>1.5</strong></p>
 <p><strong>Time Stamp</strong>: Unsigned Int, unit is 25us. Represent the data record time.</p>
 </blockquote>
 <hr />
@@ -487,6 +566,7 @@ NA</p>
 <tr>
 <th style="text-align: left;">Byte Length</th>
 <th style="text-align: left;">16</th>
+<th style="text-align: left;">1</th>
 <th style="text-align: left;">4</th>
 </tr>
 </thead>
@@ -494,12 +574,14 @@ NA</p>
 <tr>
 <td style="text-align: left;"><strong>Meaning</strong></td>
 <td style="text-align: left;">Quaternion</td>
+<td style="text-align: left;">Mag Calibrate Level</td>
 <td style="text-align: left;">Time Stamp</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Quaternion</strong>: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.</p>
-<p><strong>Time Stamp</strong>: Unsigned Long, unit is 25us. Represent the data record time.</p>
+<p><strong>Mag Calibrate Level</strong>: Magnetometer calibration level for the sensor fusion algorithm, 0 is worst, 3 is best.</p>
+<p><strong>Time Stamp</strong>: Unsigned Int, unit is 25us. Represent the data record time.</p>
 </blockquote>
 <hr />
 <h3 id="tag-0x38">Tag <code>0x38</code></h3>
@@ -514,6 +596,7 @@ NA</p>
 <tr>
 <th style="text-align: left;">Byte Length</th>
 <th style="text-align: left;">16</th>
+<th style="text-align: left;">1</th>
 <th style="text-align: left;">12</th>
 <th style="text-align: left;">4</th>
 </tr>
@@ -522,14 +605,16 @@ NA</p>
 <tr>
 <td style="text-align: left;"><strong>Meaning</strong></td>
 <td style="text-align: left;">Quaternion</td>
+<td style="text-align: left;">Mag Calibrate Level</td>
 <td style="text-align: left;">Accel Value</td>
 <td style="text-align: left;">Time Stamp</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Quaternion</strong>: contains 4 Float value, 4 bytes each, in the order of X Y Z W, represent the rotation axis and angle of the sensor.</p>
+<p><strong>Mag Calibrate Level</strong>: Magnetometer calibration level for the sensor fusion algorithm, 0 is worst, 3 is best.</p>
 <p><strong>Accel Value</strong>: Accelerometer(g) value separated in X, Y, Z axis, each axis has 4 bytes, all in Float format.</p>
-<p><strong>Time Stamp</strong>: Unsigned Long, unit is 25us.</p>
+<p><strong>Time Stamp</strong>: Unsigned Int, unit is 25us.</p>
 </blockquote>
 <hr />
 <h3 id="tag-0x3a">Tag <code>0x3A</code></h3>
