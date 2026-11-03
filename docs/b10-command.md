@@ -168,11 +168,12 @@ BLE-Sensor-B10 all command explained in this page.
 
 > Magnetometer only turn on when both **Accel ODR** and **Gyro ODR** are ON.
 
-> | Reply data format | code | reply tag | tag info |
-> | :--- | :--- | :--- | :--- |
-> | Accel, Gyro and Mag | 0x01 | `0x36` | [here](imu.md#tag-0x36) |
-> | Quaternion 9x | 0x02 | `0x37` | [here](imu.md#tag-0x37) |
-> | Quaternion 9x with Accel value | 0x03 | `0x38` | [here](imu.md#tag-0x38) |
+> | Reply Data Format | Code | Reply Tag | Max ODR | Tag Info |
+> | :--- | :--- | :--- | :--- | :--- |
+> | Accel and Gyro | 0x01 | `0x35` | 416Hz | [here](imu.md#tag-0x35) |
+> | Accel, Gyro and Mag | 0x02 | `0x36` | 416Hz | [here](imu.md#tag-0x36) |
+> | Quaternion 9x | 0x03 | `0x37` | 104Hz | [here](imu.md#tag-0x37) |
+> | Quaternion 9x with Accel value | 0x04 | `0x38` | 104Hz | [here](imu.md#tag-0x38) |
 
 > IMU should not working on other mode when call this command.
 
@@ -217,6 +218,48 @@ BLE-Sensor-B10 all command explained in this page.
 
 ---
 
+### Tag `0x35`
+
+> **Meaning:**  
+> Reply IMU data with Acceleration and Angular Velocity.
+
+> **Data format - app send:**  
+> NA
+
+> **Data format - app receive:**  
+
+> | Byte Length | 6 | 6 | 4 | Option |
+> | :--- | :--- | :--- | :--- | :--- |
+> | **Meaning** | Accel Value | Gyro Value | Time Stamp | (Next Set Of Data) |
+
+> **Accel Value**: Accelerometer X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.
+
+>>> ***Acceleration(g) = Accel Value x Sense Factor***
+
+> | Accel FS / +-g | Sense Factor |
+> | :--- | :--- |
+> | 2 | 0.000061 |
+> | 4 | 0.000122 |
+> | 8 | 0.000244 |
+> | 16 | 0.000488 |
+
+> **Gyro Value**: Gyroscope X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.
+
+>>> ***Angular Veolcity(degree/s) = Gyro Value x Sense Factor***
+
+> | Gyro FS / +-dps | Sense Factor |
+> | :--- | :--- |
+> | 250 | 0.00875 |
+> | 500 | 0.0175 |
+> | 1000 | 0.035 |
+> | 2000 | 0.07 |
+
+> **Time Stamp**: Data record time as 32bit-unsigned-integer, time unit is 25us.
+
+> If output data rate >=208Hz, multiple set of data send in one notify, determine by the length marked in header.
+
+---
+
 ### Tag `0x36`
 
 > **Meaning:**  
@@ -227,9 +270,9 @@ BLE-Sensor-B10 all command explained in this page.
 
 > **Data format - app receive:**  
 
-> | Byte Length | 6 | 6 | 6 | 4 |
-> | :--- | :--- | :--- | :--- | :--- |
-> | **Meaning** | Accel Value | Gyro Value | Mag value | Time Stamp |
+> | Byte Length | 6 | 6 | 6 | 4 | Option |
+> | :--- | :--- | :--- | :--- | :--- | :--- |
+> | **Meaning** | Accel Value | Gyro Value | Mag value | Time Stamp | (Next Set Of Data) |
 
 > **Accel Value**: Accelerometer X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.
 
@@ -258,6 +301,8 @@ BLE-Sensor-B10 all command explained in this page.
 >>> ***Magnetic Strength(mG) = Mag Value x 1.5***
 
 > **Time Stamp**: Data record time as 32bit-unsigned-integer, time unit is 25us.
+
+> If output data rate >=208Hz, multiple set of data send in one notify, determine by the length marked in header.
 
 ---
 

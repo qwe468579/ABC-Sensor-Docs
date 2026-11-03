@@ -12,10 +12,10 @@ nav:
       - R10 - Resistive Sensor:
          - overview: 'ble-sensor-b10.md'
          - BLE interface: 'bluetooth.md'
+         - Command: 'r10-command.md'
    - Logger:
       - 'T10 - Temp, Humidity, Air Press': 'logger-t10.md'
       - A10 - Motion: 'logger-a10.md'
-      - LOGGER Socket: 'logger-socket.md'
    - Collector:
       - 'T10 - Temp, Humidity, Air Press': 'collector-t10.md'
       - A10 - Acceleration: 'collector-a10.md'
