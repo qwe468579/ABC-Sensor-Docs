@@ -338,7 +338,7 @@ BLE-Sensor-B10 all command explained in this page.
 
 > **Data format - app receive:**  
 
-> | Byte Length | 16 | 1 | 12 | 4 |
+> | Byte Length | 16 | 1 | 6 | 4 |
 > | :--- | :--- | :--- | :--- | :--- |
 > | **Meaning** | Quaternion | Mag Calibrate Level | Accel Value | Time Stamp |
 
@@ -346,7 +346,16 @@ BLE-Sensor-B10 all command explained in this page.
 
 > **Mag Calibrate Level**: Magnetometer calibration level for the sensor fusion algorithm, 0 is worst, 3 is best.
 
-> **Accel Value**: Accelerometer(g) value separated in X, Y, Z axis, each axis has 4 bytes, all in Float format.
+> **Accel Value**: Accelerometer X, Y, Z axis value as 16bit-integer for each axis. Can be turn off by setting the ODR to 0x00.
+
+>>> ***Acceleration(g) = Accel Value x Sense Factor***
+
+> | Accel FS / +-g | Sense Factor |
+> | :--- | :--- |
+> | 2 | 0.000061 |
+> | 4 | 0.000122 |
+> | 8 | 0.000244 |
+> | 16 | 0.000488 |
 
 > **Time Stamp**: Data record time as 32bit-unsigned-integer, time unit is 25us.
 
